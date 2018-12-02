@@ -27,19 +27,36 @@
 //   return "Not found";
 // };
 
-// Method 3 Using one map (56ms)
-const twoSum = (nums, target) => {
-  let map = {};
-  for (let value = 0; value < nums.length; value++) {
-    let complement = target - nums[value];
-    if (map[complement] != null) {
-      return [map[complement], value];
-    }
-    map[nums[value]] = value;
-  }
+// The map idea is that you keep the key is the "value" and the value
+// is the index. So [1,2] will be [ 1 -> 0 , 2 -> 1]
 
-  return "Not found";
-};
+// Method 3 Using one associate array object (56ms)
+// const twoSum = (nums, target) => {
+//   let map = {};
+//   for (let value = 0; value < nums.length; value++) {
+//     let complement = target - nums[value];
+//     if (map[complement] != null) {
+//       return [map[complement], value];
+//     }
+//     map[nums[value]] = value;
+//   }
+
+//   return "Not found";
+// };
+
+// Method 4 Using JavaScript Map (60ms)
+function twoSum(nums, target) {
+  const map = new Map();
+
+  for (let i = 0; i < nums.length; i++) {
+    const complement = target - nums[i];
+
+    if (map.has(complement)) {
+      return [map.get(complement), i];
+    }
+    map.set(nums[i], i);
+  }
+}
 
 nums = [2, 7, 11, 15];
 target = 9;
