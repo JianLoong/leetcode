@@ -1,6 +1,6 @@
 // Naive solution.
 // The naive solution merges two arrays and then sorts it.
-// Merge is done using the spread operator. This however doesn't 
+// Merge is done using the spread operator. This however doesn't
 // meet the Big 0 requirements.
 // var findMedianSortedArrays = function(nums1, nums2) {
 //   let result = [...nums1, ...nums2];
@@ -27,9 +27,8 @@ var findMedianSortedArrays = (nums1, nums2) => {
 
   while (cursorCount > 0) {
     //cursorCount--;
-
-
-  };
+  }
+};
 
 nums1 = [2, 3];
 nums2 = [1];
