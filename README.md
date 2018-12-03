@@ -1,0 +1,1 @@
+# JavaScript Solutions for leetcode
