@@ -16,34 +16,47 @@
 //     }
 //   }
 
-//   result.sort();
-
 //   return Array.from(new Set(result.map(JSON.stringify)), JSON.parse);
+
+//   //return result;
 // };
 
-var threeSum = nums => {
-  let map = {};
-  let target = 0;
+const threeSum = nums => {
+  nums.sort((a, b) => a - b);
+  const answer = [];
+  for (let indexA = 0; indexA < nums.length - 2; indexA++) {
+    const a = nums[indexA];
+    if (a > 0) return answer;
+    if (a === nums[indexA - 1]) {
+      continue;
+    }
 
-  console.log(nums);
-  for (let value = 0; value < nums.length; value++) {
-    //let complement = target - nums[value];
-    // if (map[complement] != null) {
-    //   return [map[complement], value];
-    // }
+    let indexB = indexA + 1;
+    let indexC = nums.length - 1;
 
-    if (map[nums[value]] != null) {
-      map[nums[value]] = map[nums[value]] + 1;
-    } else {
-      map[nums[value]] = 1;
+    while (indexB < indexC) {
+      const b = nums[indexB];
+      const c = nums[indexC];
+      if (a + b + c === 0) {
+        answer.push([a, b, c]);
+      }
+      if (a + b + c >= 0) {
+        while (nums[indexC - 1] === c) {
+          indexC--;
+        }
+        indexC--;
+      }
+      if (a + b + c <= 0) {
+        while (nums[indexB + 1] === b) {
+          indexB++;
+        }
+        indexB++;
+      }
     }
   }
-
-  console.log(map);
+  return answer;
 };
-// Sorting solution
 
-nums = [-1, 0, 1, 2, -1, -4, 10];
+console.time("someFunction");
 
-const result = threeSum(nums);
-console.log(result);
+console.timeEnd("someFunction");
