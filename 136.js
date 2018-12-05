@@ -1,6 +1,8 @@
 /**
- * @param {number[]} nums
- * @return {number}
+ * Solution using set. If there is no value present, it will be added
+ * to the set. If it is present, it will be removed. Since every element
+ * would exactly appear twice besides 1.
+ *
  */
 var singleNumber = function(nums) {
   const set = new Set();
@@ -14,5 +16,3 @@ var singleNumber = function(nums) {
 
   return set.values().next().value;
 };
-
-console.log(singleNumber([2, 2, 3, , 1, 1]));
