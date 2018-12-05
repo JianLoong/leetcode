@@ -3,16 +3,16 @@
  * @return {number}
  */
 var singleNumber = function(nums) {
-  const map = new Map();
+  const set = new Set();
   for (let i = 0, length = nums.length; i < length; i++) {
-    if (!map.has(nums[i])) {
-      map.set(nums[i], 1);
+    if (!set.has(nums[i])) {
+      set.add(nums[i], 1);
     } else {
-      map.delete(nums[i]);
+      set.delete(nums[i]);
     }
   }
 
-  return map.keys().next().value;
+  return set.values().next().value;
 };
 
-console.log(singleNumber([2, 2, 1, 3, 3]));
+console.log(singleNumber([2, 2, 3, , 1, 1]));
