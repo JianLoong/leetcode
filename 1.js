@@ -1,8 +1,3 @@
-/**
- * @param {number[]} nums
- * @param {number} target
- * @return {number[]}
- */
 // Method 1 (Using double for loop)
 let twoSum = function(nums, target) {
   for (let x = 0; x < nums.length; x++) {
@@ -43,7 +38,13 @@ let twoSum = (nums, target) => {
   return "Not found";
 };
 
-// Method 4 Using JavaScript Map (60ms)
+/**
+ *
+ * Method 4 Using JavaScript Map ES6(60ms)
+ * This method uses map, however maps are only available in ES6.
+ * This is more clear in comparison using associate objects in method 3.
+ *
+ */
 let twoSum = (nums, target) => {
   const map = new Map();
 

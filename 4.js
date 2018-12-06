@@ -5,9 +5,11 @@
 let findMedianSortedArrays = function(nums1, nums2) {
   // Using spread to concat 2 arrays.
   let result = [...nums1, ...nums2];
+
   result = result.sort(function(a, b) {
     return a - b;
   });
+
   if (result.length % 2 != 0) {
     return result[Math.floor(result.length / 2)];
   } else {
