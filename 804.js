@@ -2,8 +2,8 @@
  * @param {string[]} words
  * @return {number}
  */
-var uniqueMorseRepresentations = function(words) {
-  let MORSE = [
+const uniqueMorseRepresentations = words => {
+  const MORSE = [
     ".-",
     "-...",
     "-.-.",
@@ -32,12 +32,11 @@ var uniqueMorseRepresentations = function(words) {
     "--.."
   ];
 
-  let seen = new Set();
+  const seen = new Set();
   for (let word of words) {
     let code = "";
-    console.log(word);
     for (let c of word) {
-      const value = MORSE[c.charCodeAt(0) - 97];
+      const value = MORSE[c.charCodeAt(0) - "a".charCodeAt(0)];
       code += value;
     }
     seen.add(code);
