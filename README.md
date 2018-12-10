@@ -27,13 +27,3 @@
 |   500   |          |
 |   657   |          |
 |   771   |          |
-
-## 1. Two Sums
-
-- Naive Solution would use a double for loop.
-- Better solution would involve using a hashmap, the key being the value and the value being the index. 
-
-### 2. Add Two Numbers
-
-- LinkedList 
-
