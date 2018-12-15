@@ -1,6 +1,8 @@
 /**
  * The solution of this is basically a fibonacci sequence.
- * 
+ * The "push" method seems costly and if "push" is used, it will
+ * increase the runtime to 80ms. Direct assignment is much faster
+ * in this scenario.
  * 
  * @param {number} n
  * @return {number}
