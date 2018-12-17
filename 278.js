@@ -8,7 +8,8 @@
  * };
  */
 const max = 100;
-const badVersion = 22;
+// Random between 0 and 100 (not inclusive 100)
+const badVersion = Math.floor(Math.random() * Math.floor(max));
 
 function isBadVersion(value) {
   if (value >= badVersion) return true;
@@ -42,4 +43,4 @@ const solution = function(isBadVersion) {
 
 const value = solution(isBadVersion);
 
-console.log(solution(isBadVersion)(50));
+console.log(solution(isBadVersion)(100));
