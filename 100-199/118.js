@@ -13,18 +13,14 @@ var generate = function(numRows) {
 
   while (current <= numRows) {
     let previousRow = result[result.length - 1];
-
     let currentRow = [];
     currentRow.push(1);
-
     let i = 0;
     while (i < current - 2) {
       currentRow.push(previousRow[i] + previousRow[i + 1]);
       i++;
     }
-
     currentRow.push(1);
-
     result.push(currentRow);
     current++;
   }
