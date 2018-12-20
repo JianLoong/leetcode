@@ -40,6 +40,21 @@ const minAddToMakeValid = S => {
   return counter;
 };
 
+const minAddToMakeValidTwo = S => {
+  let ans = 0;
+  let bal = 0;
+  for (let i = 0; i < S.length; ++i) {
+    bal += S.charAt(i) == "(" ? 1 : -1;
+    if (bal == -1) {
+      ans++;
+      bal++;
+    }
+    console.log(ans, bal);
+  }
+
+  return ans + bal;
+};
+
 const input = "())";
 
-console.log(minAddToMakeValid(input));
+console.log(minAddToMakeValidTwo(input));
