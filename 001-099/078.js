@@ -1,3 +1,13 @@
+/**
+ * @param {number[]} nums
+ * @return {number[][]}
+ */
+const subsets = nums => {
+  const output = new Set();
+  solve([], nums, output);
+  return [...output];
+};
+
 const solve = (soFar, rest, output) => {
   if (rest.length === 0) {
     output.add(soFar);
@@ -7,14 +17,14 @@ const solve = (soFar, rest, output) => {
   }
 };
 
-/**
- * @param {number[]} nums
- * @return {number[][]}
- */
-var subsets = function(nums) {
-  const output = new Set();
-  solve([], nums, output);
-  return [...output];
-};
+// https://leetcode.com/problems/palindrome-partitioning/discuss/182307/Java:-Backtracking-Template-General-Approach
+const subsetsMethodTwo = nums => {};
 
-console.log(subsets([1, 3, 2]));
+console.log(subsetsMethodTwo([1, 3, 2]));
+
+// P(n,r)
+// P(3,3) + P(3,2) + P(3,1)
+
+// Propersubset
+// 3! - 1 = 2^3 - 1 = 8 - 1 = 7
+// And it self 7 +  1 = 8
