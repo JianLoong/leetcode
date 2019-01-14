@@ -1,3 +1,3 @@
 # JavaScript Solutions for leetcode
 
-Solved Question - 70/953
+Solved Question - 104/970
