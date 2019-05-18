@@ -62,3 +62,6 @@ typings/
 
 # vscode
 .vscode/
+
+# Was used to add eslint
+package-lock.json

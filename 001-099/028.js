@@ -3,7 +3,12 @@
  * @param {string} needle
  * @return {number}
  */
-var strStr = function(haystack, needle) {
+var strStr = function (haystack, needle) {
   if (needle.length == 0) return 0;
   return haystack.indexOf(needle);
 };
+
+let strStr = (haystack, needle) => {
+  if (needle.length == 0) return 0;
+  return haystack.indexOf(needle);
+}
